@@ -5,13 +5,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Event1🛎️
-        - run: echo " ${{ github.event_name }}"
+        run: |
+         ${{ github.event_name }}
 
       - name: repositori
-      - run: echo "${{ github.repository }}"
+        run: |
+         echo "${{ github.repository }}"
 
       - name: Install, Build & Tests 🔧✅
-        run:  "${{ runner.os }} "
+        run: echo  ${{ runner.os }}
 
       - name: List files in the repository
         run: |
